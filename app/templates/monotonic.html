@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monotonic</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #f0f0f0;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px;
+      }
+      .box {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #333;
+      }
+      .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .box h3 {
+        margin: 0;
+        font-size: 1.5em;
+      }
+      .box p {
+        margin: 10px 0 0;
+        color: #666;
+      }
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/createJSONfromCSV" class="box">
+        <h3>Create JSON from CSV File</h3>
+        <p>Download JSON file by uploading CSV</p>
+      </a>
+      <a href="/createMonotonicGraph" class="box">
+        <h3>Create Monotonic Diagram</h3>
+        <p>Generate and visualize monotonic diagrams.</p>
+      </a>
+    </div>
+  </body>
+</html>
+ 
