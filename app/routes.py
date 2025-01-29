@@ -13,4 +13,4 @@ with open('app/q-vercel-python.json', 'r') as file:
 def get_marks():
     names = request.args.getlist('name')  # Get all 'name' parameters
     marks = [next((item['marks'] for item in data if item['name'] == name), None) for name in names]
-    return jsonify({"marks": marks})
+    return {"marks": marks}
