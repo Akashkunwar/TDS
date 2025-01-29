@@ -8,8 +8,9 @@ with open('app/q-vercel-python.json', 'r') as file:
     data = json.load(file)
 
 # Define the API route
+# Define the API route
 @app.route('/api', methods=['GET'])
 def get_marks():
     names = request.args.getlist('name')  # Get all 'name' parameters
-    results = {name: next((item['marks'] for item in data if item['name'] == name), None) for name in names}
-    return jsonify(results)
+    marks = [next((item['marks'] for item in data if item['name'] == name), None) for name in names]
+    return jsonify({"marks": marks})
