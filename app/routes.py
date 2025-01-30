@@ -13,6 +13,6 @@ with open('app/q-vercel-python.json', 'r') as file:
 # Define the API route
 @app.route('/api', methods=['GET'])
 def get_marks():
-    names = request.args.getlist('name')  # Get all 'name' parameters
+    names = request.args.getlist('name')
     marks = [next((item['marks'] for item in data if item['name'] == name), None) for name in names]
     return { "marks": marks }

@@ -1,0 +1,21 @@
+name: GitHub Actions Test
+
+on:
+  push:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 22f2000946@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
+
+      - name: Print Confirmation
+        run: echo "Workflow executed successfully"
